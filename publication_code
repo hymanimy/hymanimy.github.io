@@ -1,0 +1,46 @@
+        <!-- Section: Publications -->
+        <section id="publications" class="mb-16 md:mb-24 scroll-mt-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Selected Publications</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- EDIT ME: This is a publication entry. Copy/paste this block for each paper. -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                        Title of Your Awesome Paper Goes Here
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        <strong>Your Name</strong>, Co-author One, Co-author Two, Senior Co-author
+                    </p>
+                    <p class="text-gray-500 italic mb-3">
+                        In Proceedings of the 21st Conference on Example (EXAMPLE '24), City, Country, Oct 2024.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ PDF ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ Code ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ DOI Link ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ Slides ]</a>
+                    </div>
+                </div>
+                
+                <!-- Publication Entry 2 -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                        Another Interesting Study on a Different Topic
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        Co-author One, <strong>Your Name</strong>, Co-author Three
+                    </p>
+                    <p class="text-gray-500 italic mb-3">
+                        Journal of Example Research (JER), Vol. 10, Issue 2, pp. 123-145, 2023.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ PDF ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ Project Page ]</a>
+                    </div>
+                </div>
+
+                <!-- Add more publication blocks as needed -->
+
+            </div>
+        </section>
