@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+      EDIT ME: Change this to your name.
+      This is what appears in the browser tab.
+    -->
+    <title>Alex Hyman - Academic Portfolio</title>
+    
+    <!-- Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      /* A little extra style for the navigation links */
+      .nav-link {
+        @apply relative text-gray-600 hover:text-gray-900 transition-colors duration-200;
+      }
+      .nav-link::after {
+        content: '';
+        @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-600 transition-all duration-300;
+      }
+      .nav-link:hover::after {
+        @apply w-full;
+      }
+      
+      /* Smooth scrolling for anchor links */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 leading-relaxed">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Your Name (Logo) -->
+                <div class="flex-shrink-0">
+                    <!-- EDIT ME: Change this to your name -->
+                    <a href="#home" class="text-2xl font-bold text-gray-900">Alex Hyman</a>
+                </div>
+                
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="#home" class="nav-link font-medium">Home</a>
+                    <a href="#research" class="nav-link font-medium">Research</a>
+                    <a href="#publications" class="nav-link font-medium">Publications</a>
+                    <a href="#cv" class="nav-link font-medium">CV</a>
+                    <a href="#contact" class="nav-link font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu (Simple: just shows links, good for small sites) -->
+                <!-- For a full hamburger menu, you'd need JavaScript -->
+                <nav class="flex md:hidden space-x-4 text-sm">
+                    <a href="#research" class="nav-link">Research</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+        <!-- Section: Home (Hero) -->
+        <section id="home" class="mb-16 md:mb-24 scroll-mt-16">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                
+                <!-- Profile Image -->
+                <div class="flex-shrink-0">
+                    <!-- 
+                      EDIT ME: Replace this placeholder with a link to your photo.
+                      You can upload a photo to your GitHub repo and link to it.
+                      E.g., src="profile-photo.jpg"
+                    -->
+                    <img 
+                      src="rapelling.jpg" 
+                      alt="Me rapelling at a crag in Dunkeld!" 
+                      class="w-48 h-48 rounded-full object-cover shadow-lg"
+                      onerror="this.src='https://placehold.co/200x200/e2e8f0/334155?text=Photo+Not+Found'"
+                    >
+                </div>
+                
+                <!-- Bio & Info -->
+                <div>
+                    <!-- EDIT ME: Change this to your name -->
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Alex Hyman</h1>
+                    
+                    <!-- EDIT ME: Change this to your title/affiliation -->
+                    <p class="text-xl md:text-2xl text-indigo-600 font-semibold mb-4">
+                        Neurosymbolic AI and Formal Verification PhD Student at University of Edinburgh
+                    </p>
+                    
+                    <!-- EDIT ME: Write a short bio (2-3 sentences) -->
+                    <p class="text-gray-600 text-lg mb-6">
+                        I am a researcher focused on [Your Main Field], with specific interests in [Sub-field 1], 
+                        [Sub-field 2], and [Sub-field 3]. My work aims to [Your High-Level Goal]. 
+                        Welcome to my personal website, where you can find details about my research, publications, and projects.
+                    </p>
+                    
+                    <!-- Social & Academic Links -->
+                    <div class="flex flex-wrap gap-4">
+                        <!-- EDIT ME: Replace '#' with your actual email -->
+                        <a href="hymanimy@gmail.com" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                            </svg>
+                            <span class="font-medium">Email</span>
+                        </a>
+                        
+                        <!-- EDIT ME: Replace '#' with your Google Scholar profile link
+                        <a href="#" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M12.14 10.191h.014C12.825 10.191 14 9.384 14 8s-1.175-2.191-1.846-2.191C11.518 5.809 11 5.37 11 5s.518-.809 1.154-.809C13.482 4.191 15 5.79 15 8s-1.518 3.809-2.846 3.809h-.014c-.636 0-1.154-.37-1.154-.809s.518-.809 1.154-.809zM8.654 11.809L8.654 11.809C8.018 11.809 7.5 11.439 7.5 10.809s.518-.809 1.154-.809C9.289 10 10.5 8.933 10.5 7.5s-1.211-2.5-1.846-2.5C8.018 5 7.5 4.63 7.5 4s.518-.809 1.154-.809L8.654 3.191C10.682 3.191 12 5.13 12 7.5s-1.318 4.309-3.346 4.309zM4.346 11.809L4.346 11.809C2.318 11.809 1 9.87 1 7.5s1.318-4.309 3.346-4.309L4.346 3.191C4.982 3.191 5.5 3.561 5.5 4.191s-.518.809-1.154.809C3.711 5 2.5 6.067 2.5 7.5s1.211 2.5 1.846 2.5C4.982 10 5.5 10.37 5.5 11s-.518.809-1.154.809z"/>
+                            </svg>
+                            <span class="font-medium">Google Scholar</span>
+                        </a> -->
+                        
+                        <!-- EDIT ME: Replace '#' with your LinkedIn profile link -->
+                        <a href="www.linkedin.com/in/alex-hyman-a4a903213" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.708-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                            </svg>
+                            <span class="font-medium">LinkedIn</span>
+                        </a>
+
+                        <!-- EDIT ME: Replace '#' with your GitHub profile link -->
+                        <a href="https://github.com/hymanimy" class="flex items-center gap-2 text-gray-700 hover:text-indigo-600 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                            <span class="font-medium">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Research Interests -->
+        <section id="research" class="mb-16 md:mb-24 scroll-mt-16">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Research Interests</h2>
+                
+                <!-- EDIT ME: Add/remove/change these items -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-1">Your First Research Interest (e.g., Machine Learning)</h3>
+                        <p class="text-gray-600">
+                            A brief paragraph describing your interest in this area. What problems 
+                            are you trying to solve? What methods do you use? Keep it concise and accessible.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-1">Your Second Research Interest (e.g., NLP)</h3>
+                        <p class="text-gray-600">
+                            Another paragraph for your next research interest. You can highlight
+                            any specific projects or questions that motivate you in this domain.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-1">Your Third Research Interest (e.g., HCI)</h3>
+                        <p class="text-gray-600">
+                            And one more. This structure helps break up your profile into clear, 
+                            digestible topics for visitors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Publications -->
+        <section id="publications" class="mb-16 md:mb-24 scroll-mt-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Selected Publications</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- EDIT ME: This is a publication entry. Copy/paste this block for each paper. -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                        Title of Your Awesome Paper Goes Here
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        <strong>Your Name</strong>, Co-author One, Co-author Two, Senior Co-author
+                    </p>
+                    <p class="text-gray-500 italic mb-3">
+                        In Proceedings of the 21st Conference on Example (EXAMPLE '24), City, Country, Oct 2024.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ PDF ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ Code ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ DOI Link ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ Slides ]</a>
+                    </div>
+                </div>
+                
+                <!-- Publication Entry 2 -->
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">
+                        Another Interesting Study on a Different Topic
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        Co-author One, <strong>Your Name</strong>, Co-author Three
+                    </p>
+                    <p class="text-gray-500 italic mb-3">
+                        Journal of Example Research (JER), Vol. 10, Issue 2, pp. 123-145, 2023.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ PDF ]</a>
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-800">[ Project Page ]</a>
+                    </div>
+                </div>
+
+                <!-- Add more publication blocks as needed -->
+
+            </div>
+        </section>
+
+        <!-- Section: CV -->
+        <section id="cv" class="mb-16 md:mb-24 scroll-mt-16 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Curriculum Vitae</h2>
+            <p class="text-gray-600 text-lg mb-6 max-w-2xl mx-auto">
+                For a detailed overview of my academic background, teaching experience, and awards, please download my full CV.
+            </p>
+            <!-- 
+              EDIT ME: Upload your CV (e.g., "cv.pdf") to your GitHub repo 
+              and change the href attribute to point to it.
+            -->
+            <a 
+              href="YOUR_CV.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+                Download CV (PDF)
+            </a>
+        </section>
+
+        <!-- Section: Contact -->
+        <section id="contact" class="scroll-mt-16">
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-10 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                <p class="text-gray-600 text-lg mb-6 max-w-2xl mx-auto">
+                    I'm always open to discussing new research ideas, collaborations, or opportunities.
+                </p>
+                
+                <!-- EDIT ME: Update your contact info -->
+                <div class="text-lg text-gray-800 space-y-2">
+                    <p>
+                        <strong>Email:</strong> 
+                        <a href="mailto:your.email@example.com" class="text-indigo-600 hover:underline">your.email@example.com</a>
+                    </p>
+                    <p>
+                        <strong>Office:</strong> 
+                        Room 123, Example Building, 123 University Ave, City, Country
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 mt-16 md:mt-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <!-- EDIT ME: Change "Your Name" and the year -->
+            <p class="text-gray-500 text-sm">
+                &copy; 2025 Alex Hyman. All rights reserved. 
+            </p>
+            <p class="text-gray-500 text-sm mt-1">
+                Hosted on <a href="https://pages.github.com/" class="hover:underline">GitHub Pages</a>.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
